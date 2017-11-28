@@ -1,0 +1,45 @@
+html,body{
+    height: 100%;
+    background-color: #b7dbff;
+    margin: 0;
+    padding: 0;
+
+}
+#container{
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    
+}
+
+.title{
+    padding-top: 100px;
+    text-align: center;
+    margin: 0;
+}
+input[type=text],input[type=password]{
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    margin: 12px 0px;
+    box-sizing: border-box;
+
+}
+label{
+    
+}
+button{
+    width: 100%;
+    padding: 8px;
+
+}
+
+#login{
+    max-width: 30%;
+    width: 30%;
+/*    margin: 0 auto;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
