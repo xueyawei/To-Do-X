@@ -4,29 +4,22 @@ const app = new express();
 // set port#
 app.set('port', process.env.PORT || 8888);
 
-// set static directory
-app.use('/public',express.static(__dirname + '/public'));
+// init
+app.use('/public', express.static(__dirname + '/public'));
+app.use(require('body-parser')());
 
-// route
-app.get('/',function(req,res){
-    res.type('text/html');
-    res.sendFile(__dirname + '/html/index.html');
-});
+// set template engine [handlebars]
+var handlebars = require('express-handlebars')
+    .create({
+        defaultLayout: 'main'
+    });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
 
-app.post('/login',(req,res)=>{
-    console.log(req);
-    res.end('Get!');
-});
+// connect routes
+require('./route.js')(app);
 
-// 404 route
-app.use((req,res)=>{
-    res.type('text/plain');
-    res.status(404);
-    res.send("404 - Not Found");
-});
-
-
-
-app.listen(app.get('port'),()=>{
-    console.log("Server Running at: "+app.get('port'));
+// start listen
+app.listen(app.get('port'), () => {
+    console.log("Server Running at: " + app.get('port'));
 })

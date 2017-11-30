@@ -1,3 +1,9 @@
 # ignore packages installed by npm
 node_modules
+
+# credentials
+credentials
+
+# other files
+test
 .DS_Store

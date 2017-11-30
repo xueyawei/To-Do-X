@@ -28,9 +28,10 @@ input[type=text],input[type=password]{
 label{
     
 }
-button{
+button.sign{
     width: 100%;
     padding: 8px;
+    margin: 5px 0;
 
 }
 
@@ -42,4 +43,9 @@ button{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-70%);
+}
+
+.modal-dialog{
+    margin: 20% auto;
+
 }

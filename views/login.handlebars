@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login To-Do</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <link href="/public/css/login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <h1 class="title">To-do</h1>
+        <div id="login">
+            <form action="/login" method="post">
+                <label for=""><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for=""><b>Password</b></label>
+                <input type="password" placeholder="EnterPassword" name="password" required>
+
+                <button class="btn btn-primary sign" type="submit">Login</button>
+
+            </form>
+
+            <button class="btn btn-outline-success sign" type="button" data-toggle="modal" data-target="#sign-up-modal">Sign-up</button>
+
+
+        </div>
+
+        <div class="modal fade" id="sign-up-modal" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign-up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/sign-up" method="post" id="sign-up-form">
+                            <div class="form-group">
+                                <label for="sign-name">Username</label>
+                                <input class="form-control" type="text" id="sign-username" name="sign-username" placeholder="Enter Username" required value="xueyawei">
+                                
+                                <label for="sign-password">Password</label>
+                                <input class="form-control" id="sign-password" type="password" name="sign-password" placeholder="Enter Password" required value="password_test">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="register">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/public/javascript/login.js"></script>
+
+</html>
