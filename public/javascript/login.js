@@ -14,13 +14,32 @@ $("#sign-up-form").on('submit',function(evt){
         url:action,
         method: 'post',
         data: formNode.serialize(),
-        success: success,
+        success: success
 
     });
 
     
 
 })
+
+$('#sign-username').blur(function(evt){
+    var username = $(this).val();
+    if(username!='' && username!=undefined){
+        $.ajax({
+            url: '/api/check-username?username='+username,
+            method: 'get',
+            success: (data)=>{
+                console.log("Get From Check API"+data)
+            }
+        })
+        
+    }
+
+});
+
+$('#sign-password').blur(function(evt){
+    var password = $(this).val();
+});
 
 function success(data){
     console.log("Post Success")

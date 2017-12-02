@@ -25,6 +25,16 @@ input[type=text],input[type=password]{
     box-sizing: border-box;
 
 }
+
+input.regi{
+    width: 90%;
+    display: inline;
+}
+
+span img{
+    width: 7%;
+}
+
 label{
     
 }

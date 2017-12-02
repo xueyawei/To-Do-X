@@ -1,4 +1,5 @@
-const signUpModule = require('../modal/signUp');
+const User = require('../modal/userSchema');
+
 
 exports.login = function (req, res) {
     console.log(req.body.username);
@@ -10,6 +11,7 @@ exports.signUp = function (req, res) {
     const username = req.body['sign-username'];
     const password = req.body['sign-password'];
     console.log('Sign-up\n'+'Username: ' + username + '\nPassword: ' + password);
+    signUpModule.createAccount(username,password);
     res.send("Got")
 };
 
