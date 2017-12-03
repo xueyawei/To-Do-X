@@ -35,9 +35,14 @@ span img{
     width: 7%;
 }
 
-label{
-    
+span.icon{
+    display: none;
 }
+#username-alert,#username-alert-error{
+    width: 90%;
+    display: none;
+}
+
 button.sign{
     width: 100%;
     padding: 8px;
@@ -58,4 +63,10 @@ button.sign{
 .modal-dialog{
     margin: 20% auto;
 
+}
+
+/* Success modal */
+#success-modal h5{
+    text-align: center;
+    width: 100%;
 }
